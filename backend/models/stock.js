@@ -11,7 +11,6 @@ const stockSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: "product",
   },
-  dbStatus: Boolean,
 });
 
 const stock = mongoose.model("stock", stockSchema);
