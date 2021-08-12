@@ -3,7 +3,7 @@ const Product = require("../models/product");
 
 const registerStock = async (req, res) => {
   if (!req.body.quantity || !req.body.direction || !req.body.product)
-    return res.status.status(400).send("Process failes: Incomplete data");
+    return res.status(400).send("Process failes: Incomplete data");
 
   const product = await Product.findOne({ name: req.body.product });
   if (!product) return res.status(400).send("Product not found");
